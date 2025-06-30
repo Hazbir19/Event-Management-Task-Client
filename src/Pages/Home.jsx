@@ -3,13 +3,11 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Home = () => {
     return (
-        <>
-        <div className='text-center text-orange-400'>
-            This is home Page
+      <>
+        <div className="text-center text-text bg-custom-gradient font-bold text-7xl font-heading">
+          This is home Page
         </div>
-   
-      
-        </>
+      </>
     );
 };
 

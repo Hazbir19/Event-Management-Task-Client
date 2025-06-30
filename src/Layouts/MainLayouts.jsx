@@ -1,19 +1,17 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
+import Navber from "../Navber/Navber";
 
 const MainLayouts = () => {
-    return (
-        <>
-        <div>
-            Main Layout 
-            {/* To do Navber */}
-        </div>
-              <Link to="/" className='mr-5'>Home</Link>
-              <Link to="/events">Events</Link>
-        <Outlet></Outlet>
-        {/* to do Footer */}
-        </>
-    );
+  return (
+    <>
+      <div className="bg-background h-screen">
+        {/* To do Navber */}
+        <Navber></Navber>
+        <Outlet></Outlet> {/* to do Footer */}
+      </div>
+    </>
+  );
 };
 
 export default MainLayouts;

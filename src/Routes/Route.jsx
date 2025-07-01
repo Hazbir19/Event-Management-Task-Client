@@ -4,6 +4,7 @@ import EventPage from "../Pages/EventPage";
 import MainLayouts from "./../Layouts/MainLayouts";
 import MyEvent from "../Pages/MyEvent";
 import Add_Events from "../Pages/Add_Events";
+import LoginRegister from "../Components/LoginRegister";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: "/addEvents",
         element: <Add_Events></Add_Events>,
+      },
+      {
+        path: "/login",
+        element: <LoginRegister></LoginRegister>,
       },
     ],
   },

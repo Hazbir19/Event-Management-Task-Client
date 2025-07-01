@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { MainContent } from "../../Context/ContextApi";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ManuButton = () => {
@@ -19,7 +19,7 @@ const ManuButton = () => {
           <img
             src="https://i.ibb.co/bRK7908C/Event-Logo-removebg-preview.png"
             alt="Logo"
-            className="w-[5rem] h-[4rem] rounded-full"
+            className="w-[7rem] h-[7rem] rounded-full"
           />
         </Link>
       </div>

@@ -9,12 +9,12 @@ import { MainContent } from "../Context/ContextApi";
 import { CircleUser } from "lucide-react";
 
 const Navber = () => {
-  const user = false;
-  const{menuOpen,profileOpen} = useContext(MainContent)
+  const { user } = useContext(MainContent);
+  const { menuOpen, profileOpen } = useContext(MainContent);
 
   return (
     <div>
-      <nav className="bg-background shadow-md">
+      <nav className="bg-background shadow-md sticky">
         <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
           <ManuButton></ManuButton>
           <ul
@@ -42,9 +42,7 @@ const Navber = () => {
               </>
             )}
 
-            {profileOpen && user && (
-           <OpenProfile/>
-            )}
+            {profileOpen && user && <OpenProfile />}
           </div>
         </div>
       </nav>

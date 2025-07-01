@@ -5,7 +5,7 @@ import axios from "axios";
 import { MainContent } from "../Context/ContextApi";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-const API = "http://localhost:5000";
+
 
 export default function LoginRegister() {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,20 +18,19 @@ export default function LoginRegister() {
     reset,
     formState: { errors },
   } = useForm();
-
+  const API = "https://event-management-server-side-sigma.vercel.app";
   const onSubmit = async (data) => {
     const endpoint = isLogin ? `${API}/login` : `${API}/register`;
     const response = await axios.post(endpoint, data);
     reset(); // Reset form after submit
-    setUser(response.data.user);
     if (response.data.message !== "Invalid credentials") {
+      localStorage.setItem("user", JSON.stringify(response.data.user));
+      setUser(response.data.user);
       toast.success(response.data.message);
       navigate("/");
-    }else{
-
+    } else {
       toast.error(response.data.message);
     }
-
   };
 
   const toggleForm = () => {
